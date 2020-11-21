@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bettactoe/static/css/main.849811a6.chunk.css",
-    "main.js": "/bettactoe/static/js/main.eaf8de4a.chunk.js",
-    "main.js.map": "/bettactoe/static/js/main.eaf8de4a.chunk.js.map",
+    "main.js": "/bettactoe/static/js/main.d81c1e47.chunk.js",
+    "main.js.map": "/bettactoe/static/js/main.d81c1e47.chunk.js.map",
     "runtime-main.js": "/bettactoe/static/js/runtime-main.fd3fb10e.js",
     "runtime-main.js.map": "/bettactoe/static/js/runtime-main.fd3fb10e.js.map",
     "static/js/2.6422be6a.chunk.js": "/bettactoe/static/js/2.6422be6a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.fd3fb10e.js",
     "static/js/2.6422be6a.chunk.js",
     "static/css/main.849811a6.chunk.css",
-    "static/js/main.eaf8de4a.chunk.js"
+    "static/js/main.d81c1e47.chunk.js"
   ]
 }
