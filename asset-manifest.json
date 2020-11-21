@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/bettactoe/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/bettactoe/static/js/main.108b33f0.chunk.js",
+    "main.js.map": "/bettactoe/static/js/main.108b33f0.chunk.js.map",
+    "runtime-main.js": "/bettactoe/static/js/runtime-main.04304c12.js",
+    "runtime-main.js.map": "/bettactoe/static/js/runtime-main.04304c12.js.map",
+    "static/js/2.221ead9b.chunk.js": "/bettactoe/static/js/2.221ead9b.chunk.js",
+    "static/js/2.221ead9b.chunk.js.map": "/bettactoe/static/js/2.221ead9b.chunk.js.map",
+    "static/js/3.54a8ff12.chunk.js": "/bettactoe/static/js/3.54a8ff12.chunk.js",
+    "static/js/3.54a8ff12.chunk.js.map": "/bettactoe/static/js/3.54a8ff12.chunk.js.map",
+    "index.html": "/bettactoe/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/bettactoe/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.221ead9b.chunk.js.LICENSE.txt": "/bettactoe/static/js/2.221ead9b.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/bettactoe/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.04304c12.js",
+    "static/js/2.221ead9b.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.108b33f0.chunk.js"
+  ]
+}
