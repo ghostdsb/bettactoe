@@ -1,0 +1,32 @@
+.player-hud{
+    width: 30%;
+    height: 100%;
+    border: solid;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.balance{
+    /* top: 0; */
+    /* width: 100%; */
+    height: 30%;
+    border-bottom: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+	font-weight: 400;
+}
+
+.bet{
+    /* top: 0; */
+    /* width: 100%; */
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+	font-weight: 400;
+}

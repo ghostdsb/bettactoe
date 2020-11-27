@@ -1,0 +1,23 @@
+.bet-controller{
+    width: 20%;
+    height: 100%;
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.up,
+.down{ 
+    width: 40px;
+    height: 40px;
+    border: solid;
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+	font-weight: 800;
+
+}
