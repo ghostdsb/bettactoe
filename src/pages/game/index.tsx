@@ -3,6 +3,7 @@ import { useHistory, useLocation } from 'react-router';
 import Board from '../../components/board';
 import HUD from '../../components/hud';
 import Result from '../../components/result';
+import { NameContext } from '../../context';
 import { network } from '../../services/channels';
 import { PLAYER_ID } from '../../services/login';
 import { connectToGameChannel } from '../../services/network';
@@ -10,10 +11,13 @@ import { connectToGameChannel } from '../../services/network';
 import "./style.css"
 
 type TGameChannelData = {
+        
         gameChannelData: {
         match_id: string,
         players: any[]
-    }
+            
+        },
+        playerName: string
 }
 
 type TGameLocation = {
@@ -25,13 +29,16 @@ const Game = () => {
     const history = useHistory()
     const location: TGameLocation = useLocation();
 
+    console.log("DSB ~ file: index.tsx ~ line 32 ~ Game ~ location", location);
     if (!location.state) {
         history.push({
             pathname: "/",
         });
         // return <div></div>;
     }
-    
+
+    const [opponentName, setOpponentName] = useState("OPPONENT")
+
     const [isGameReady, setGameReady] = useState(false)
     const [canBet, setBetStatus] = useState(true)
     const [canMove, setMoveStatus] = useState(false)
@@ -49,12 +56,17 @@ const Game = () => {
     useEffect(() => {
         if(location.state){
             
-            network.gameChannel = connectToGameChannel(location.state.gameChannelData)
+            network.gameChannel = connectToGameChannel(location.state.gameChannelData, location.state.playerName)
             network.gameChannel.join()
             .receive("ok", resp => {console.log("Joined game channel", resp)})
         
             network.gameChannel.on("start_game_event", (message) => {
                 console.log("On start_game_event", message);
+                if(message.gamestate.player_1.id === PLAYER_ID){
+                    setOpponentName(message.gamestate.player_2.name)
+                }else{
+                    setOpponentName(message.gamestate.player_1.name)
+                }
                 setGameReady(true)
             });
         
@@ -146,7 +158,9 @@ const Game = () => {
             {
                 isGameReady && 
                 <div className="start-game">
-                    <HUD canBet={canBet} setBetAmount={setBetAmount} isOpponentVisible={isOpponentVisible} opponentData={opponentData} playerData={playerData} betController={(val:number) => handleBetController(val)}/>
+                    <NameContext.Provider value={{playerName: location.state.playerName, opponentName: opponentName}}>
+                        <HUD canBet={canBet} setBetAmount={setBetAmount} isOpponentVisible={isOpponentVisible} opponentData={opponentData} playerData={playerData} betController={(val:number) => handleBetController(val)}/>
+                    </NameContext.Provider>
                     <div className="bet-confirm" style={{opacity: canBet?1:0}}>
                         <button className="btn-bet-confirm" onClick={placeBet}>CONFIRM</button>
                     </div>

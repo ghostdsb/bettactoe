@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { NameContext } from '../../context';
 import BetController from '../bet-controller';
 import PlayerHud from '../player-hud';
 import "./style.css"
@@ -13,22 +14,12 @@ type THud = {
 }
 
 const HUD:React.FC<THud> = ({canBet, setBetAmount, isOpponentVisible, opponentData, playerData, betController}) => {
-    // const [balanceA, setBalanceA] = useState(playerData.balance)
-    // const [betA, setBetA] = useState(playerData.bet)
-
-    // const handleBetController = (val:number) => {
-    //     let newBalance = Math.max(0,Math.min(playerData.balance,balanceA-val))
-    //     let newBet = Math.max(0,Math.min(playerData.balance,betA+val))
-    //     setBalanceA(newBalance)
-    //     setBetA(newBet)
-    //     setBetAmount(newBet)
-    // }
-
+    const playerNames = useContext(NameContext)
     return (
         <div className="hud">
-            <PlayerHud balance={playerData.balance} bet={playerData.bet}/>
+            <PlayerHud balance={playerData.balance} bet={playerData.bet} name={playerNames.playerName}/>
             <BetController canBet={canBet} onClick={(val:number) => betController(val) }/>
-            <PlayerHud balance={opponentData.balance} bet={opponentData.bet} lid={!isOpponentVisible}/>
+            <PlayerHud balance={opponentData.balance} bet={opponentData.bet} lid={!isOpponentVisible} name={playerNames.opponentName}/>
         </div>
     );
 };

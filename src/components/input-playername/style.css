@@ -1,0 +1,26 @@
+.input-playername{
+}
+
+.pname-input-field{
+    background-color: #393e46;
+    height: 50px;
+    width: 154px;
+    color: #eeeeee;
+    border: solid 1px;
+    border-color: #393e46;
+    align-items: center;
+    text-align: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 26px;
+    font-weight: 100; 
+
+    /* position: relative; */
+    /* bottom: 100%; */
+}
+
+*:focus {outline:none !important}
+
+input[type=text]:focus {
+    background-color: #3d4147;
+}
