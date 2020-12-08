@@ -24,7 +24,7 @@ const MenuButton: React.FC<TMenuButton> = (props) => {
 						? "0%"
 						: props.shouldResetWidth
 						? "0%"
-						: "67%",
+						: "70%",
                 }}
                 
 			>
@@ -34,7 +34,8 @@ const MenuButton: React.FC<TMenuButton> = (props) => {
 					id={props.text}
 					placeholder={placeholderText}
 					value={props.roomName}
-                    onChange={props.handleOnChange}
+					onChange={props.handleOnChange}
+					spellCheck="false"
                     required
 				/>
 			</div>
@@ -61,6 +62,10 @@ const MenuButton: React.FC<TMenuButton> = (props) => {
 							? () => {}
 							: props.onClick
 					}
+					backgroundColor={
+						props.shouldResetWidth
+						? ""
+						: "#ffd369"}
 				/>
 			</div>
 		</div>

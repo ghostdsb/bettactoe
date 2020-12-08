@@ -13,4 +13,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     font-weight: 100;
+    border-radius: 0px;
+    border: none;
 }
+
+.btn:active {
+    background-color: #eae2b7;
+    border-radius: 0px;
+    border: none;
+    /* box-shadow: 0 5px #666; */
+    /* transform: translateY(4px); */
+  }

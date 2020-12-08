@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomButton from '../custom-button';
 import "./style.css"
 
 type TBetController = {
@@ -8,15 +9,24 @@ type TBetController = {
 
 const BetController = (props: TBetController) => {
     
-    const handleBetController = (val:number) => {
+    const fireBetUp = () => {
         if(!props.canBet) return
-        props.onClick(val)
+        props.onClick(1)
+    }
+
+    const fireBetDown = () => {
+        if(!props.canBet) return
+        props.onClick(-1)
     }
     
     return (
         <div className="bet-controller" style={{opacity: props.canBet?1:0}}>
-            <div className="up" onClick={()=>handleBetController(1)}>U</div>
-            <div className="down" onClick={()=>handleBetController(-1)}>D</div>
+            <div className="up" onClick={fireBetUp}>
+                <CustomButton text={"↑"} onClick={fireBetUp}/>
+            </div>
+            <div className="down" onClick={fireBetDown}>
+                <CustomButton text={"↓"} onClick={fireBetDown}/>
+            </div>
         </div>
     );
 };

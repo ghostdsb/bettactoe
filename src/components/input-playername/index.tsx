@@ -9,7 +9,7 @@ type TInputPlayername = {
 const InputPlayername:React.FC<TInputPlayername> = (props) => {
     return (
         <div className="input-playername">
-            {<input className="pname-input-field" type="text" id="fname" name="fname" value={props.value} onChange={props.handleChange}/>}
+            {<input className="pname-input-field" placeholder={"your name"} type="text" id="fname" name="fname" value={props.value} onChange={props.handleChange} spellCheck="false"/>}
         </div>
     );
 };

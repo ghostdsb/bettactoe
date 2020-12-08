@@ -44,7 +44,7 @@ const MenuButtonContainer: React.FC<TMenuButtonContainer> = (props) => {
 				<div onClick={() => setGameMode(3, "default")}>
 					<MenuButton
 						onClick={props.onSubmit}
-						text={"RANDOM"}
+						text={"RANDOM ROOM"}
 						shouldResetWidth={index !== 3}
 						handleOnChange={props.handleOnChange}
                         roomName={props.roomName}

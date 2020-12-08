@@ -1,7 +1,7 @@
 import { Channel } from "phoenix";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { useLoading, Grid } from '@agney/react-loading';
+import { useLoading, Grid } from "@agney/react-loading";
 
 import CustomButton from "../../components/custom-button";
 import InputPlayername from "../../components/input-playername";
@@ -21,16 +21,15 @@ const Menu = () => {
 	const history = useHistory();
 	const [gameMode, setGameMode] = useState("");
 	const [roomName, setRoomName] = useState("");
+	const [searching, setSearching] = useState(false);
 	const [playerCount, setPlayerCount] = useState(2);
-    const [name, setName] = useState(String(PLAYER_ID));
-    
-    const [searching, setSearching] = useState(false)
+	const [name, setName] = useState(localStorage.getItem("btt-name") || String(PLAYER_ID));
 
-    const { containerProps, indicatorEl } = useLoading({
-        loading: true,
-        //@ts-ignore
-        indicator: <Grid width="50"/>,
-      });
+	const { containerProps, indicatorEl } = useLoading({
+		loading: true,
+		//@ts-ignore
+		indicator: <Grid width="50" />,
+	});
 
 	const goToGame = (gameChannelData: any) => {
 		history.push({
@@ -42,7 +41,6 @@ const Menu = () => {
 	const onSetGameMode = (mode?: string) => {
 		setRoomName("");
 		setPlayerCount(2);
-		console.log("GAME MODE ", mode ? mode : "default");
 		setGameMode(mode ? mode : "default");
 	};
 
@@ -50,31 +48,28 @@ const Menu = () => {
 		event: React.ChangeEvent<HTMLInputElement>
 	) => void = (e) => {
 		e.preventDefault();
-
 		setRoomName(e.target.value);
 	};
 
 	const handlePlayerNameChange: (
 		event: React.ChangeEvent<HTMLInputElement>
 	) => void = (e) => {
-		console.log(e.target.value);
 		setName(e.target.value);
+		localStorage.setItem("btt-name", e.target.value);
 	};
 
 	const requestStartGame = () => {
+		let gameData: TMatchData = {
+			roomName,
+			playerCount,
+			gameMode: gameMode || "default",
+		};
 
-            
-        let gameData: TMatchData = {
-            roomName,
-            playerCount,
-            gameMode: gameMode||"default",
-        };
-        
-        if(gameData.gameMode !== "default" && !roomName){
-            return
-        }
-        
-        setSearching(true)
+		if (gameData.gameMode !== "default" && !roomName) {
+			return;
+		}
+
+		setSearching(true);
 
 		let matchmakerChannel = connectToMatchmakerChannel(gameData);
 		matchmakerChannel.join().receive("ok", (resp) => {
@@ -86,7 +81,6 @@ const Menu = () => {
 			console.log("On match maker event", message);
 			matchmakerChannel.leave();
 			goToGame(message);
-
 		});
 	};
 
@@ -98,22 +92,19 @@ const Menu = () => {
 				value={name}
 				handleChange={handlePlayerNameChange}
 			/>
-            {
-                searching?
-                <div className="searching">
-                    <div>
-                        {indicatorEl}
-                    </div>
-                    {/* SEARCHING... */}
-                </div>:
-                <MenuButtonContainer
-                    onSubmit={requestStartGame}
-                    // onSubmit={()=>{}}
-                    handleModeChange={onSetGameMode}
-                    roomName={roomName}
-                    handleOnChange={handleRoomNameChange}
-                />
-            }
+			{searching ? (
+				<div className="searching">
+					SEARCHING...
+					<div>{indicatorEl}</div>
+				</div>
+			) : (
+				<MenuButtonContainer
+					onSubmit={requestStartGame}
+					handleModeChange={onSetGameMode}
+					roomName={roomName}
+					handleOnChange={handleRoomNameChange}
+				/>
+			)}
 		</div>
 	);
 };

@@ -1,16 +1,26 @@
 .player-hud{
-    width: 30%;
-    height: 100%;
-    border: solid;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    /* margin-top: 90px; */
+    width: 110px;
+    height: 172px;
+    /* background-color: rgba(100,0,0,0.3); */
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: 100; 
+    color: #fefefe;
 }
 
-.balance{
-    /* top: 0; */
-    /* width: 100%; */
+.player-name{
+    width: 110px;
+    height: 30px;
+    /* margin-bottom: 10px; */
+}
+
+/* .balance{
     height: 30%;
     border-bottom: solid;
     display: flex;
@@ -21,12 +31,91 @@
 }
 
 .bet{
-    /* top: 0; */
-    /* width: 100%; */
     height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
 	font-weight: 400;
+} */
+
+
+.wallet-container{
+    width: 110px;
+    height: 142px;
+    /* background-color:white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s background-color ease;
+}
+
+.hud-spinner{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#fcbf49;
+    color: #003049;
+    border-radius: 5px;
+}
+
+.wallet{
+    width: 106px;
+    height: 138px;
+    background-color:#118ab2;
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    align-items: center;
+}
+
+.balance{
+    width: 106px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.balance-text{
+    width: 40%;
+    height: 100%;
+    color: white;
+    font-size: 15px;
+}
+.balance-amount{
+    width: 60%;
+    height: 100%;
+    color: white;
+    font-size: 26px;
+    text-align: right;
+    padding-right: 2px;
+}
+
+.bet{
+    width: 100px;
+    height: 100px;
+    background-color: #fcbf49;
+    border-radius: 5px;
+}
+
+.bet-text{
+    width: 100%;
+    height: 0%;
+    color: #003049;
+    font-size: 15px;
+    text-align: left;
+}
+.bet-amount{
+    width: 100%;
+    height: 100%;
+    color: #003049;
+    font-size: 60px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

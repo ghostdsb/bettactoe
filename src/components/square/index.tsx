@@ -18,12 +18,14 @@ const Square = (props: TSquare) => {
         network.gameChannel?.push("move",{movedata: { pos: props.pos}})
     }
     return (
-        <button className="square" onClick={sendMove}>
+        <div className="square" onClick={sendMove} style={{backgroundColor: "#fcbf49"}}>
+            <>
 		    {value === "0" && ""}
 		    {value === PLAYER_ID && "X"}
 		    {value !== PLAYER_ID && value !== "0"  && "O"}
+            </>
 
-        </button>
+        </div>
     );
 };
 

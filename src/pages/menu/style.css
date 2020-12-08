@@ -29,13 +29,14 @@
 .searching{
     color: ivory;
     /* background-color: rgba(0,0,0,0.2); */
-    width: 150px;
-    height: 150px;
+    width: 262px;
+    height: 196px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 30px;
     font-weight: 200;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }

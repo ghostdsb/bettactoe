@@ -4,25 +4,27 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 10px auto;
 }
 
 .input-component,
 .rname-input-field{
-    width: 68%;
+    width: 70%;
     transition: 0.1s width ease;
 }
 
 .rname-input-field{
+    padding-left: 5px;
     background-color: #393e46;
     height: 50px;
     width: 100%;
     color: #eeeeee;
-    border: solid 1px;
+    /* border: solid 1px; */
     border-color: #393e46;
     align-items: center;
     text-align: left;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 100;
 }
 
@@ -30,4 +32,9 @@
     width: 30%;
     height: 50px;
     transition: 0.1s width ease;
+}
+
+input[type="text"]{
+    /* padding: 0px; */
+    border: none;
 }

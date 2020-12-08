@@ -15,8 +15,8 @@ export type TMatchData = {
 };
 
 console.log("connecting to btt server ....");
-// const socket: Socket = new Socket("ws://localhost:4000/socket", {
-	const socket: Socket = new Socket("wss://still-plains-97814.herokuapp.com/socket", {
+const socket: Socket = new Socket("ws://localhost:4000/socket", {
+	// const socket: Socket = new Socket("wss://still-plains-97814.herokuapp.com/socket", {
 	params: { playerId: PLAYER_ID },
 });
 socket.connect();

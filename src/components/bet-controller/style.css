@@ -6,11 +6,12 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 38px;
 }
 
 .up,
 .down{ 
-    width: 40px;
+    width: 50px;
     height: 40px;
     border: solid;
     border-radius: 60px;
