@@ -1,30 +1,25 @@
 import React from 'react';
-import { preProcessFile } from 'typescript';
 import { network } from '../../services/channels';
-import { PLAYER_ID } from '../../services/login';
 import "./style.css"
 
 type TSquare = {
-    value: string,
-    pos: number,
-    canMove: boolean,
+    sign: string,
+    index: number,
+    canMove: boolean
+    backgroundColor: string
 }
 
-const Square = (props: TSquare) => {
-    const {value} = props
-
+const Square:React.FC<TSquare> = (props) => {
+    const {sign, index, canMove, backgroundColor} = props
+    
     const sendMove = () => {
-        if(!props.canMove) return
-        network.gameChannel?.push("move",{movedata: { pos: props.pos}})
+        canMove && network.gameChannel?.push("move",{movedata: { pos: index}})
     }
     return (
-        <div className="square" onClick={sendMove} style={{backgroundColor: "#fcbf49"}}>
-            <>
-		    {value === "0" && ""}
-		    {value === PLAYER_ID && "X"}
-		    {value !== PLAYER_ID && value !== "0"  && "O"}
-            </>
-
+        <div className="square" onClick={sendMove} style={{backgroundColor: backgroundColor}}>
+            <div className="sign">
+            {sign!=="0"?sign:""}
+            </div>
         </div>
     );
 };

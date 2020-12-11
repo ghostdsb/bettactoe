@@ -1,0 +1,62 @@
+.status-board{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 26px;
+    font-weight: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 262px;
+}
+.bet-input{
+    background-color: #393e46;
+    margin: 0px;
+    height: 50px;
+    /* width: 262px; */
+    color: #eeeeee;
+    border: solid 0px;
+    border-color: #393e46;
+    align-items: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 26px;
+    font-weight: 100;
+    transition: 0.1s width ease, 0.1s display ease;
+}
+
+*:focus {outline:none !important}
+
+input[type=number]:focus {
+    background-color: #3d4147;
+}
+
+input[type="number" i] {
+    padding: 0px 0px;
+}
+
+.notice-board{
+    /* width: 262px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(229, 229, 229);
+    font-size: 20px;
+    transition: 0.1s width ease, 0.1s display ease;
+}
+
+.bet-btn{
+    /* width: 50px; */
+    height: 50px;
+    /* margin-bottom: 10px; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    border-radius: 0px;
+    border: none;
+    transition: 0.1s width ease, 0.1s display ease;
+}
+
+button{
+    padding: 0px;
+}

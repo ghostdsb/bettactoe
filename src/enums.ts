@@ -1,4 +1,4 @@
-export enum messageType{
+export enum MESSAGE_TYPE{
     PLACE_BET,
     WAITING_FOR_OPPONENT_BET,
     OPPONENT_MOVE,
@@ -6,6 +6,20 @@ export enum messageType{
     YOU_WON,
     YOU_LOST,
     NONE
+}
+
+export enum NOTICE_BOARD_STATUS{
+    BETTING,
+    NOTICE,
+    GAMEOVER
+}
+
+export enum GAMESTATE{
+    BETTING,
+    BET_WAITING,
+    MOVE_WAITING,
+    MOVING,
+    GAMEOVER
 }
 
 // export const message = {
