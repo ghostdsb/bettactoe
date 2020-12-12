@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/bettactoe/static/css/main.14386e85.chunk.css",
-    "main.js": "/bettactoe/static/js/main.4f1062da.chunk.js",
-    "main.js.map": "/bettactoe/static/js/main.4f1062da.chunk.js.map",
+    "main.js": "/bettactoe/static/js/main.8ddf1e3a.chunk.js",
+    "main.js.map": "/bettactoe/static/js/main.8ddf1e3a.chunk.js.map",
     "runtime-main.js": "/bettactoe/static/js/runtime-main.76418082.js",
     "runtime-main.js.map": "/bettactoe/static/js/runtime-main.76418082.js.map",
-    "static/js/2.becf9c15.chunk.js": "/bettactoe/static/js/2.becf9c15.chunk.js",
-    "static/js/2.becf9c15.chunk.js.map": "/bettactoe/static/js/2.becf9c15.chunk.js.map",
+    "static/js/2.daba6b1c.chunk.js": "/bettactoe/static/js/2.daba6b1c.chunk.js",
+    "static/js/2.daba6b1c.chunk.js.map": "/bettactoe/static/js/2.daba6b1c.chunk.js.map",
     "static/js/3.b2d629a5.chunk.js": "/bettactoe/static/js/3.b2d629a5.chunk.js",
     "static/js/3.b2d629a5.chunk.js.map": "/bettactoe/static/js/3.b2d629a5.chunk.js.map",
     "index.html": "/bettactoe/index.html",
     "static/css/main.14386e85.chunk.css.map": "/bettactoe/static/css/main.14386e85.chunk.css.map",
-    "static/js/2.becf9c15.chunk.js.LICENSE.txt": "/bettactoe/static/js/2.becf9c15.chunk.js.LICENSE.txt"
+    "static/js/2.daba6b1c.chunk.js.LICENSE.txt": "/bettactoe/static/js/2.daba6b1c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.76418082.js",
-    "static/js/2.becf9c15.chunk.js",
+    "static/js/2.daba6b1c.chunk.js",
     "static/css/main.14386e85.chunk.css",
-    "static/js/main.4f1062da.chunk.js"
+    "static/js/main.8ddf1e3a.chunk.js"
   ]
 }
