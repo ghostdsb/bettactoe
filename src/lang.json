@@ -1,12 +1,13 @@
 {
     "en":{
-        "place_bet": "PLACE YOU BET",
+        "place_bet": "place your bet",
         "waiting_for_op_bet": "WAITING FOR OPPONENT'S BET",
         "waiting_for_op_move": "WAITING FOR OPPONENT'S MOVE",
         "move": "MAKE YOU MOVE NOW",
         "you_won": "CONGRATULATIONS! AGAIN?",
         "you_lost": "TRY AGAIN?",
         "bet": "BET",
-        "go": "GO"
+        "go": "GO",
+        "equal_bet":"equal bets!"
     }
 }

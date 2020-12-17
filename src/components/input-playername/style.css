@@ -1,4 +1,25 @@
 .input-playername{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.name-label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 100; 
+    color:rgba(181, 181, 129, 0.367); 
+    text-align: left;
+    /* display: none; */
+}
+
+label:active {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    font-weight: 100; 
+    color: #eeeeee; 
+    /* display: block; */
 }
 
 .pname-input-field{
@@ -21,3 +42,4 @@
 input[type=text]:focus {
     background-color: #3d4147;
 }
+

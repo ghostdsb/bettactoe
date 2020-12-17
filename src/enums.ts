@@ -5,6 +5,7 @@ export enum MESSAGE_TYPE{
     YOUR_MOVE,
     YOU_WON,
     YOU_LOST,
+    EQUAL_BETS,
     NONE
 }
 

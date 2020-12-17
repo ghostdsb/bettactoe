@@ -8,7 +8,7 @@ import { NameContext } from "../../context";
 import { GAMESTATE, NOTICE_BOARD_STATUS, MESSAGE_TYPE } from "../../enums";
 import { network } from "../../services/channels";
 import { GAME_NAME, PLAYER_ID } from "../../services/login";
-import { connectToGameChannel } from "../../services/network";
+import { connectToGameChannel} from "../../services/network";
 
 import "./style.css";
 
@@ -72,7 +72,10 @@ const Game = () => {
 				}
 				
 				if (message.turn.id === "continue") {
-					
+					setPlayerBetValue(0)
+					setGameState(GAMESTATE.BETTING)
+					setMessageType(MESSAGE_TYPE.EQUAL_BETS)
+					setNoticeBoardStatus(NOTICE_BOARD_STATUS.BETTING)
 				} else {
 					if (message.turn.id === PLAYER_ID) {
 						setGameState(GAMESTATE.MOVING)
@@ -91,6 +94,7 @@ const Game = () => {
 				setPlayerBetValue(0)
 				setGameState(GAMESTATE.BETTING)
 				setNoticeBoardStatus(NOTICE_BOARD_STATUS.BETTING)
+				setMessageType(MESSAGE_TYPE.PLACE_BET)
 				if (message.p1.id === PLAYER_ID) {
 					
 				} else {
