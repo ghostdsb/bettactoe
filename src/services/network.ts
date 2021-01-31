@@ -15,8 +15,8 @@ export type TMatchData = {
 };
 
 console.log("connecting to btt server ....");
-const socket: Socket = new Socket("ws://localhost:4000/socket", {
-	// const socket: Socket = new Socket("wss://still-plains-97814.herokuapp.com/socket", {
+// const socket: Socket = new Socket("ws://localhost:4000/socket", {
+	const socket: Socket = new Socket("wss://still-plains-97814.herokuapp.com/socket", {
 	params: { playerId: PLAYER_ID },
 });
 socket.connect();
@@ -71,20 +71,11 @@ const connectToMatchmakerChannel = (gameData: TMatchData) => {
 };
 
 const connectToGameChannel = (matchmakerChannelMessage: any, name: string) => {
-	console.log(
-		"DSB ~ file: network.ts ~ line 71 ~ connectToGameChannel ~ matchmakerChannelMessage",
-		matchmakerChannelMessage
-	);
 	let matchId = matchmakerChannelMessage["match_id"];
 	let gameName = GAME_NAME;
 	let gameChannel = socket.channel(`${gameName}:${matchId}`, { name });
 	return gameChannel;
 };
-
-// const connectToMatchmakerLobbyChannel = () => {
-// 	let gameChannel = socket.channel(`lobby:mm`, { playerId: PLAYER_ID });
-// 	return gameChannel;
-// };
 
 const connectToGameLobbyChannel = () => {
 	let gameChannel = socket.channel(`lobby:btt`, { playerId: PLAYER_ID });

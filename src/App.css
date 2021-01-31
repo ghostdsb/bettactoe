@@ -9,12 +9,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #fafafa;
+  overflow-x: hidden;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* background-color: #294a8b;

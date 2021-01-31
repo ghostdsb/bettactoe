@@ -17,6 +17,8 @@ import CustomButton from "../../components/custom-button";
 import { Channel } from "phoenix";
 import { network } from "../../services/channels";
 
+import lang from "../../lang.json"
+
 const Menu = () => {
 	const history = useHistory();
 	const [gameMode, setGameMode] = useState("");
@@ -60,14 +62,12 @@ const Menu = () => {
 			for(let i=0; i<leftees.length;i++){
 				if(players[leftees[i]]){
 					let key = leftees[i]
-                    // console.log("DSB ~ file: index.tsx ~ line 59 ~ lobby.on ~ key", key);
 					delete players[key]
 				}else{
 				}
 			}
 			setPlayersList(Object.keys(players))
 			console.log("DSB ~ file: index.tsx ~ line 62 ~ lobby.on ~ Object.keys(players)", Object.keys(players));
-			// console.log("ONLINE COUNT:", onlineCount)
 		});
 		lobby.on("presence_state", (message) => {
 			console.log("STATE", message);
@@ -140,9 +140,18 @@ const Menu = () => {
 		setMatchmakerChannel(matchmakerChannel)
 	};
 
+	const goToHTP = () => {
+		history.push({
+			pathname: "/htp",
+		});
+	}
+
 	return (
 		<div className="menu">
-			
+			<div className="htp-btn-container">
+				<button className="arrow-button" onClick={goToHTP}>&lt; ? </button>
+
+			</div>
 			<Logo backgroundColor={"#ffd369"} foregroundColor={"#393e46"} />
 
 			<InputPlayername
@@ -153,9 +162,7 @@ const Menu = () => {
 				<div className="searching">
 					<div className="searching-text">
 						SEARCHING
-						{/* <div>{indicatorEl}</div> */}
 						<div className="loading"></div>
-						{/* <div>{indicatorEl}</div> */}
 					</div>
 					<div
 					className="btn-component" style={{width: "100%"}}>

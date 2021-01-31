@@ -8,6 +8,7 @@
         "you_lost": "TRY AGAIN?",
         "bet": "BET",
         "go": "GO",
-        "equal_bet":"equal bets!"
+        "equal_bet":"equal bets!",
+        "how_to_play": "HOW TO PLAY"
     }
 }

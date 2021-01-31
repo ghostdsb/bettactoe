@@ -53,7 +53,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     font-weight: 200;
-    color: rgba(181, 181, 129, 0.367);
+    color: rgba(181, 181, 129, 0.9);
     text-align: left;
     display: flex;
     flex-direction: row;
@@ -87,4 +87,25 @@
       width: 20px;
     }
   }
+
+  .arrow-button{
+    background-color: transparent;
+    border-radius: 0px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    color: rgba(229, 229, 229,0.5);
+    /* position: absolute; */
+    left: 10%;
+    top: 0%;
+    transition: 0.5s position ease;
+  }
   
+  .htp-btn-container{
+    width: 100%;
+    display: flex;
+    margin-left: 25%;
+    height: 0%;
+
+  }

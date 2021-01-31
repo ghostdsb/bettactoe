@@ -1,0 +1,54 @@
+.how-to-play{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #222831;
+    height: 100%;
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+.title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    color:rgb(229, 229, 229);
+}
+
+.how-to-play-contents{
+    margin: 30px 30px 0 44px;
+}
+
+.question{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color:rgb(229, 229, 229);
+    text-align: left;
+}
+
+.answer{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color:rgb(229, 229, 229);
+    text-align: left;
+}
+
+span{
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 10px;
+}
+
+ul{
+    padding-inline-start: 20px;
+    list-style-type: lower-greek;
+}
+
+/* .arrow-inverted{
+    left: 80%;
+} */
