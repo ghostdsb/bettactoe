@@ -1,5 +1,6 @@
 .custom-button{
     width: 100%;
+    cursor: pointer;
 }
 
 .btn-field{
@@ -15,6 +16,7 @@
     font-weight: 100;
     border-radius: 0px;
     border: none;
+    cursor: pointer;
 }
 
 .btn:active {

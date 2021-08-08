@@ -102,6 +102,10 @@ const Game = () => {
 				} else {
 				}
 			});
+			network.gameChannel.on("terminate", (message) => {
+				console.log("GO TO HOME, OTHER PLAYER LEFT")
+				goHome()
+			});
 
 			network.gameChannel.on("game_res", (message) => {
 				setWinPattern(message.pattern);
